@@ -55,4 +55,8 @@ public class DashBoardController {
 		return dashBoardService.getAllTasks(boardId, userId);
 	}
 	
+	@DeleteMapping("/removeBoard")
+	public void removeBoard(@RequestParam Integer boardId) {
+		dashBoardService.removeBoard(boardId);
+	}
 }

@@ -53,4 +53,11 @@ public class DashboardServiceImpl implements DashboardService {
 		return taskRepository.findByBoard(board);
 	}
 
+	@Override
+	public void removeBoard(Integer boardId) {
+		Board board = boardRepository.findById(boardId).get();
+		List<Task> tasks=taskRepository.findByBoard(board);
+		taskRepository.deleteAll(tasks);
+		boardRepository.deleteById(boardId);
+	}
 }

@@ -11,4 +11,5 @@ public interface DashboardService {
 	public Task createTask(Task task);
 	public Task updateTask(Task task);
 	public List<Task> getAllTasks(Integer boardId, Integer userId);
+	public void removeBoard(Integer boardId);
 }
