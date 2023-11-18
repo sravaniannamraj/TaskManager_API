@@ -34,7 +34,7 @@ public class Task {
 	private String taskDescription;
 	
 	@ManyToOne(fetch = FetchType.EAGER,
-		    cascade = CascadeType.ALL)
+		    cascade = CascadeType.DETACH)
 	@JoinColumn(name="board_id")
 	private Board board;
 	
